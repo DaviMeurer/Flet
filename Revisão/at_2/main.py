@@ -11,7 +11,7 @@ def main(page):
 
             ft.Row(
                 controls = [
-                    ft.ElevatedButton("Enviar"),
+                    ft.ElevatedButton("Enviar", on_click = lambda e: print("CU PRETO")),
                     ft.ElevatedButton("Cancelar")
                 ],
                 spacing = 15,
