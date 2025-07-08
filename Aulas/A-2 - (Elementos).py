@@ -5,6 +5,7 @@ def main(tela: flet.Page):
     tela.padding=10
     tela.title="Meu primeiro app"
     tela.theme_mode=flet.ThemeMode.DARK
+    tela.spacing=100
 
     def imprime(e):
         print("Volume: ",int(sl_volume.value))

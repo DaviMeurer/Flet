@@ -21,26 +21,27 @@ def main(tela:ft.Page):
         tela.update()
 
     barra_menu = ft.AppBar(
-    leading=ft.IconButton(ft.icons.MENU, on_click=lambda e: tela.open(drawer_menu)),
-    leading_width=40,
-    title=ft.Text("App Senac", color=ft.colors.BLUE_800, weight='bold'),
-    bgcolor=ft.colors.ORANGE_400,
-    actions = [
-        ft.ElevatedButton(ft.icons.SEARCH, ft.colors.WHITE, on_click = lambda e: 'Cliquei Search'),
-        ft.ElevatedButton(ft.icons.SETTINGS, ft.colors.WHITE,on_click = lambda e: 'Cliquei Settings'),
-        ft.PopupMenuButton(
-            items=[
-                ft.PopupMenuItem(text='Perfil', icon=ft.icons.PERSON),
-                ft.PopupMenuItem(text='Privacidade'),
-                ft.PopupMenuItem(),
-                ft.PopupMenuItem(text='info', checked = False)
-            ],
-            icon_color=ft.colors.WHITE
+        leading=ft.IconButton(ft.icons.MENU, on_click=lambda e: tela.open(drawer_menu)),
+        leading_width=40,
+        title=ft.Text("App Senac", color=ft.colors.BLUE_800, weight='bold'),
+        bgcolor=ft.colors.ORANGE_400,
+        actions = [
+            ft.ElevatedButton(ft.icons.SEARCH, ft.colors.WHITE, on_click = lambda e: 'Cliquei Search'),
+            ft.ElevatedButton(ft.icons.SETTINGS, ft.colors.WHITE,on_click = lambda e: 'Cliquei Settings'),
+            ft.PopupMenuButton(
+                items=[
+                    ft.PopupMenuItem(text='Perfil', icon=ft.icons.PERSON),
+                    ft.PopupMenuItem(text='Privacidade'),
+                    ft.PopupMenuItem(),
+                    ft.PopupMenuItem(text='info', checked = False)
+                ],
+                icon_color=ft.colors.WHITE
         )
       ]
     )
 
     drawer_menu = ft.NavigationDrawer(
+
         on_change=drawer_change,
         on_dismiss=drawer_dismiss,
         controls=[
@@ -67,7 +68,7 @@ def main(tela:ft.Page):
             ft.Text("Pagina 1", style="headlineMedium"),
             ft.Image(src='src/Spiffo.jpg',width=600),
             ft.ElevatedButton(text="Ir para a página 2", on_click = lambda e: tela.go("/pagina2")),
-            ft.ElevatedButton(text="Ir para a página 3", on_click = lambda e: tela.go("/pagina3")),
+            ft.ElevatedButton(text="Ir para a página 3", on_click = lambda e: tela.go("/pagina3"))
         ]
     )
     pagina2 = ft.View(
@@ -98,7 +99,4 @@ def main(tela:ft.Page):
     tela.on_route_change=navegação
     tela.go('/pagina1')
 
-    tela.add(
-        barra_menu
-    )
 ft.app(target=main)

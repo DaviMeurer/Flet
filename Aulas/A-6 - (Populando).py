@@ -49,8 +49,7 @@ def main(page: ft.Page):
             ft.DataColumn(ft.Text("Nome")),
             ft.DataColumn(ft.Text("E-mail")),
             ft.DataColumn(ft.Text("Telefone"))
-        ],
-        rows=[]
+        ]
     )
     
     

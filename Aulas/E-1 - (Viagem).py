@@ -8,7 +8,7 @@ def main(tela: flet.Page):
     def imprima(e):
         print("\nOs seus Cadastros são estes: \n")
         print("| Nome: ",tf_nome.value,
-              "\n| E-mail: ",tf_email.value,
+              "\n| E-mail: ",tf_nome.value,
               "\n| Telefone: ",tf_tel.value,
               "\n| Gênero: ",dd_generos.value,
               "\n| País de Residência: ",dd_paises.value,

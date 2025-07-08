@@ -66,9 +66,33 @@ def main(tela: ft.Page):
         max_extent=100
     )
 
+    cardAlbum = ft.Card(
+        content = ft.Container(
+            content = ft.Column(
+                [
+                    ft.ListTile(
+                        leading=ft.Icon(ft.icons.ALBUM),
+                        title=ft.Text("Faroeste Caboclo"),
+                        subtitle=ft.Text("'Que País É Este (1978/1987)', Legião Urbana")
+                    ),
+                    ft.Row(
+                        [
+                            ft.TextButton("Adicionar à playlist"),
+                            ft.TextButton("Escutar")
+                        ],
+                        alignment=ft.MainAxisAlignment.END
+                    ),
+                ]
+            ),
+            width=375,
+            padding=5
+        )
+    )
+
     tela.add(coluna,
              linha,
              album,
-             grid)
+             grid,
+             cardAlbum)
 
 ft.app(target=main)
